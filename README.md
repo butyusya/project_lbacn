@@ -1,6 +1,6 @@
 # Miraculous: Tales of recommendations and statistics
 
-The result of this project is a website dedicated to Miraculous, where a user can get recommendations for viewing or look at different types of statistics. It can be seen here:
+The result of this project is a website dedicated to Miraculous, where a user can get recommendations for viewing or look at different types of statistics. It can be seen here: https://miraculousrecsandstats.pythonanywhere.com/
 
 ## How to use the website
 
