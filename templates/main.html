@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Main page {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 750px; height: 350px;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Get a recommendation</p>
+    <form action="/recommendation">
+    <p style="color: black; font-size: 20px">The episode should be similar to:</p>
+  <select id="select-character" name="episode">
+    <option value="">Pick an episode...</option>
+      {% for episode in episodes %}
+    <option value="{{ episode }}">{{ episode }}</option>
+{% endfor %}
+  </select>
+<p style="color: black; font-size: 20px">The episode should have the character:</p>
+  <select id="select-episode" name="character">
+    <option value="">Pick a character...</option>
+      {% for character in characters %}
+    <option value="{{ character }}">{{ character }}</option>
+{% endfor %}
+  </select>
+        <div class="horizontal-center"><button type="submit" class="btn" style="background-color: #e31e1e; color: white; font-size: 25px">Let's go!</button></div>
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Help {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 900px; max-height: 80%; min-height: 420px;
+overflow-y: auto;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">What is it for</p>
+     <p style="text-align:left; color: black; margin: 10px; font-size: 25px">This website is dedicated to Miraculous: Tales of Ladybug & Cat Noir.</p>
+    <p style="text-align:left; color: black; margin: 10px; font-size: 20px">If you want to watch something but just can't decide what, go to the main page (Get an episode) and get a recommendation based on your preference.</p>
+    <p style="text-align:left; color: black; margin: 10px; font-size: 20px">If you want to make sure that your favorite character is getting enough lines click Statistics, choose desired category and learn a bit more about Miraculous.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">How it all works</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Get an episode</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 25px">To get a recommendation you need to fill (just start typing and all possible options will be shown) two fields: a similar episode and a participating character. Both of them are optional and can be left blank. Here is how the recommendation depends on the filling of this two fields:</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">1. If both of them are empty you will get a random episode.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">2. If only a character is present you will get a random episode with that character.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">3. If only an episode is present you will get the one most similar to it. It is always the same recommendation for the same source episode. (Every other episode is ranked based on its similarity to this one, so you will just get the top 1 everytime.)</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">4. If both are present you will get a combo: most similar to the source episode with the desired character. And again you will always get the same recommendation for the same fillings.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 18px"><i>NB: if some character is only present in one episode, and you fill in both this character and this episode, your recommendation will be this exact episode.</i></p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 25px">Your recommendation will be in the form: picture, title, synopsis. Click on 'MORE INFO' will lead you to the fan wiki page about this episode.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Statistics</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 25px">You can get four types of statistics: for a character, for an episode, for a season, and overall statistics. Just choose a desirable category.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">1. For the first three categories you will get a field. You need to choose exact option for which you want to get statistics. If the field is empty you will get statistics for a random option.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">2. Overall statistics you will get just by clicking on the respective category.</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 18px"><i>NB: on fan wiki some characters can be written differently on different pages (for example, Jagged or Jagged Stone or Stone), so they considered to be different characters in every place on this website.</i></p>
+</div>
+{% endblock %}

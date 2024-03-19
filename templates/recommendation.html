@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Recommendation {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 1050px; max-height: 80%; min-height: 420px;
+overflow-y: auto;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Your recommendation</p>
+    <div class="row">
+  <div class="column">
+    <img src="static/{{image}}.png" style="height: 250px; margin: 20px; position: relative; top: 50%;
+  left: 50%;transform: translate(-50%, -50%)">
+  </div>
+  <div class="column">
+      <p style="text-align:center; color: black; margin: 10px; font-size: 35px">{{title}}</p>
+      <p style="text-align:center; color: black; font-size: 18px"><i>{{disc}}</i></p>
+    <p>{{synopsis}}</p>
+      <p style="text-align:center"><a href="{{link}}" style="color: red; font-size: 25px" target="_blank">MORE INFO</a></p>
+  </div>
+</div>
+</div>
+{% endblock %}

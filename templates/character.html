@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Character {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 750px; height: 250px;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Get statistics</p>
+    <form action="/character_stats">
+    <p style="color: black; font-size: 20px">For this character:</p>
+  <select id="select-character" name="character">
+    <option value="">Pick a character...</option>
+      {% for character in characters %}
+    <option value="{{ character }}">{{ character }}</option>
+{% endfor %}
+  </select>
+        <div class="horizontal-center"><button type="submit" class="btn" style="background-color: #e31e1e; color: white; font-size: 25px">Let's go!</button></div>
+        </form>
+</div>
+{% endblock %}

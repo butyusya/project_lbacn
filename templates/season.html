@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Season {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 750px; height: 250px;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Get statistics</p>
+    <form action="/season_stats">
+    <p style="color: black; font-size: 20px">For this season:</p>
+  <select id="select-season" name="season">
+      <option value="">Pick a season...</option>
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+  </select>
+        <div class="horizontal-center"><button type="submit" class="btn" style="background-color: #e31e1e; color: white; font-size: 25px">Let's go!</button></div>
+        </form>
+</div>
+{% endblock %}

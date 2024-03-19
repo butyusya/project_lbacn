@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Stats character {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="height: 80%; overflow-y: scroll;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Statistics for {{character}}</p>
+    <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of episodes:&nbsp;{{num_ep}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of lines:&nbsp;{{num_lines}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Average number of lines per episode:&nbsp;{{av_lines}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 10 episodes by number of lines:</p>
+            {% for top in top_10 %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+    <img src="static/character_heatmap.png" style="width: 100%; position: relative; left: 50%; transform: translateX(-50%)">
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Stats season {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="height: 80%; overflow-y: scroll;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Statistics for season {{season}}</p>
+<div class="row">
+        <div class="column">
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of episodes:&nbsp;{{num_ep}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of characters:&nbsp;{{num_char}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of lines:&nbsp;{{num_lines}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 10 characters by number of lines:</p>
+            {% for top in top_char_lines %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 5 episodes by number of lines:</p>
+            {% for top in top_ep_lines %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+            </div>
+  <div class="column">
+      <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Average&nbsp;number&nbsp;of&nbsp;characters&nbsp;per&nbsp;episode:&nbsp;{{av_chars_ep}}</p>
+      <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Average number of lines per episode:&nbsp;{{av_lines_ep}}</p>
+      <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Average number of lines per character:&nbsp;{{av_lines_char}}</p>
+                  <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 10 characters by number of episodes:</p>
+      {% for top in top_char_eps %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+      <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 5 episodes by number of characters:</p>
+            {% for top in top_ep_chars %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+  </div>
+        </div>
+    <img src="static/bar_char.png" style="width: 100%; position: relative; left: 50%; transform: translateX(-50%)">
+    <img src="static/bar_line.png" style="width: 100%; position: relative; left: 50%; transform: translateX(-50%)">
+</div>
+
+{% endblock %}

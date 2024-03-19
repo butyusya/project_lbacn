@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Episode {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="width: 750px; height: 250px;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Get statistics</p>
+    <form action="/episode_stats">
+    <p style="color: black; font-size: 20px">For this episode:</p>
+  <select id="select-episode" name="episode">
+    <option value="">Pick an episode...</option>
+      {% for episode in episodes %}
+    <option value="{{ episode }}">{{ episode }}</option>
+{% endfor %}
+  </select>
+        <div class="horizontal-center"><button type="submit" class="btn" style="background-color: #e31e1e; color: white; font-size: 25px">Let's go!</button></div>
+        </form>
+</div>
+{% endblock %}

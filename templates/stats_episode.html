@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Stats episode {% endblock %}
+
+{% block content %}
+
+
+<div class="container" style="height: 80%; overflow-y: scroll;">
+    <p style="text-align:center; color: black; margin: 10px; font-size: 35px">Statistics for {{episode}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of characters:&nbsp;{{num_char}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Total number of lines:&nbsp;{{num_lines}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Average number of lines per character:&nbsp;{{av_lines}}</p>
+            <p style="text-align:center; color: black; margin: 10px; font-size: 30px">Top 10 characters by number of lines:</p>
+            {% for top in top_10 %}
+    <p style="text-align:center; color: black; margin: 10px; font-size: 20px">{{ top[0] }} — {{ top[1] }}</p>
+{% endfor %}
+    <img src="static/episode_piechart.png" style="width: 60%; position: relative; left: 50%; transform: translateX(-50%)">
+</div>
+{% endblock %}
