@@ -40,13 +40,13 @@ This section explains how website works.
 
 * *crawler.ipynb* – collecting information from [fan wiki](https://miraculousladybug.fandom.com/wiki/Miraculous_Ladybug_Wiki) and saving it to **lbacn.db** (first edition) in the table *episodes* (ep_id, season, ep_href, ep_title, synopsis, plot, script). Also saving **images** for every episode in the directory */static*.
 
-* *clean_db.ipynb* – saving the second edition of **lbacn.db**. It adds two tables. The first one is *characters_lines* (ep_id, character, num_of_replics) with information about number of lines by character per episode. After cleaning and lemmatizing all texts for each episode, vectorizing them, and ranking by cosine similarity it creates table similarity (ep_id, top_1_id, ...). It also saves all **characters** and **episodes** in respective txt files (each character and episode on a new line).
+* *clean_db.ipynb* – saving the second edition of **lbacn.db**. It adds two tables. The first one is *characters_lines* (ep_id, character, num_of_replics) with information about number of lines by character per episode. After cleaning and lemmatizing all texts for each episode, vectorizing them, and ranking by cosine similarity it creates table *similarity* (ep_id, top_1_id, ...). It also saves all **characters** and **episodes** in respective txt files (each character and episode on a new line).
 
-* *get_ep.py* – defines four functions that return recommendation based on source date (one for each combination of presence or absence of a character and an episode).
+* *get_ep.py* – defines four functions that return recommendation based on the source data (one for each combination of presence or absence of a character and an episode).
 
 * *stats.py* – defines four functions that return statistics for each of the four categories (episode, character, season, and overall).
 
-* *overall_stats.py* – uses function for overall statistics, saves returned information to **overall_stats.txt** (in binary form) and saves returned diagrams to directiry */static*.
+* *overall_stats.py* – uses function for overall statistics, saves returned information to **overall_stats.txt** (in binary form) and saves returned diagrams to directiry */static*, so overall statistics can be presented faster.
 
 * *main.py* – main file. It uses images from */static* and html files from */templates* to return the target website. It also uses functions from *get_ep.py* and *stats.py* to get information from *lbacn.db* for each input.
 
